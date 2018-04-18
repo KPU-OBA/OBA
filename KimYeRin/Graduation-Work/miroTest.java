@@ -1,5 +1,7 @@
-
-package service;
+/*
+ * Copyright softtrain. All rights reserved.
+ */
+package miro;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +9,24 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-
+/**
+ * 
+ * <b>MiroEducation</b>
+ * <pre>
+ * @file : service
+ *           └ miroTest.java
+ *
+ * --------------------------------------------------------
+ *   수 정 일 자        수 정 자              수 정 내 용
+ * --------------  -------------  -------------------------
+ * 2018. 3. 28.    ksj  최초작성
+ *
+ * --------------------------------------------------------
+ *</pre>
+ * @date : 2018. 3. 28.
+ * @author : ksj
+ * @version : 1.0 (jdk 1.6)
+ */
 public class miroTest {
 	public static void main(String[] args) {
 //		getMiro(3,"dd");
@@ -39,7 +58,6 @@ public class miroTest {
 					 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 					 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 					 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1};
-		
 		
 		if(level == 1 || level == 2){//폭탄 3개
 			row = 4;
