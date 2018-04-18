@@ -1,6 +1,4 @@
-/*
- * Copyright softtrain. All rights reserved.
- */
+
 package miro;
 
 import java.util.ArrayList;
