@@ -76,8 +76,9 @@ void setup(){
 void loop(){
   int r = analogRead(IRRX);
   //int buttonCount;
+  
   if( abs(r - val) > 0){
-    //Serial.println(r);
+    Serial.println(r);
     val = r;
     delay(100);
   }
