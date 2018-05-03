@@ -1,0 +1,119 @@
+-- 데이터 베이스 생성
+create database miro_education default CHARACTER SET UTF8; 
+
+use miro_education;
+
+
+-- 테이블 생성
+create table TB_EDU_DATA(
+seq INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- 순번
+word varchar(10),			     -- 단어
+filePath varchar(200),	 		     -- 그림 경로
+type varchar(1),			     -- 1:한글 , 2:영어, 3:수학
+level varchar(1) 			     -- 1,2,3,4,5,.. 레벨 (현재는 1자리수만저장.. 추후에 늘어나면 varchar(2)로 변경
+);
+
+-- 데이터 입력
+
+-- 국어 (type1)
+-- 레벨1
+insert into TB_EDU_DATA(word,filePath, type, level) values ('강','../images/korean/level1/강.png', '1' , '1'); -- 강
+insert into TB_EDU_DATA(word,filePath, type, level) values ('노랑','../images/korean/level1/노랑.png', '1' , '1'); -- 강
+insert into TB_EDU_DATA(word,filePath, type, level) values ('달','../images/korean/level1/moon.png', '1' , '1'); -- 달
+insert into TB_EDU_DATA(word,filePath, type, level) values ('리본','../images/korean/level1/리본.png', '1' , '1'); -- 리본
+
+-- 레벨2
+insert into TB_EDU_DATA(word,filePath, type, level) values ('바다', null, '1' , '2'); -- 바다
+insert into TB_EDU_DATA(word,filePath, type, level) values ('나무', '../images/korean/level2/나무.png', '1' , '2'); -- 나무
+insert into TB_EDU_DATA(word,filePath, type, level) values ('오리', '../images/korean/level2/오리.png', '1' , '2'); -- 오리
+insert into TB_EDU_DATA(word,filePath, type, level) values ('바나나', '../images/korean/level2/바나나.png', '1' , '2'); -- 바나나
+insert into TB_EDU_DATA(word,filePath, type, level) values ('기차', '../images/korean/level2/기차.png', '1' , '2'); -- 기차
+insert into TB_EDU_DATA(word,filePath, type, level) values ('아기', '../images/korean/level2/아기.png', '1' , '2'); -- 아기
+insert into TB_EDU_DATA(word,filePath, type, level) values ('고추', null, '1' , '2'); -- 고추
+insert into TB_EDU_DATA(word,filePath, type, level) values ('모자', '../images/korean/level2/모자.png', '1' , '2'); -- 모자
+
+-- 레벨3
+insert into TB_EDU_DATA(word,filePath, type, level) values ('잠자리', '../images/korean/level3/잠자리.png', '1' , '3'); -- 잠자리
+insert into TB_EDU_DATA(word,filePath, type, level) values ('반지', '../images/korean/level3/반지.png', '1' , '3'); -- 반지
+insert into TB_EDU_DATA(word,filePath, type, level) values ('그림', '../images/korean/level3/그림.png', '1' , '3'); -- 그림
+insert into TB_EDU_DATA(word,filePath, type, level) values ('바람', '../images/korean/level3/바람.png', '1' , '3'); -- 바람
+insert into TB_EDU_DATA(word,filePath, type, level) values ('버섯', '../images/korean/level3/버섯.png', '1' , '3'); -- 버섯
+
+-- 레벨4
+insert into TB_EDU_DATA(word,filePath, type, level) values ('코끼리', '../images/korean/level4/코끼리.png', '1' , '4'); -- 코끼리
+insert into TB_EDU_DATA(word,filePath, type, level) values ('풀밭', '../images/korean/level4/풀밭.png', '1' , '4'); -- 풀밭
+insert into TB_EDU_DATA(word,filePath, type, level) values ('촛불', '../images/korean/level4/촛불.png', '1' , '4'); -- 촛불
+insert into TB_EDU_DATA(word,filePath, type, level) values ('개구리', '../images/korean/level4/코끼리.png', '1' , '4'); -- 개구리
+insert into TB_EDU_DATA(word,filePath, type, level) values ('노래', '../images/korean/level4/노래.png', '1' , '4'); -- 노래
+insert into TB_EDU_DATA(word,filePath, type, level) values ('연필', '../images/korean/level4/연필.png', '1' , '4'); -- 연필
+insert into TB_EDU_DATA(word,filePath, type, level) values ('원숭이', '../images/korean/level4/원숭이.png', '1' , '4'); -- 원숭이
+
+-- 레벨5
+insert into TB_EDU_DATA(word,filePath, type, level) values ('핸드폰', '../images/korean/level5/핸드폰.png', '1' , '5'); -- 핸드폰
+insert into TB_EDU_DATA(word,filePath, type, level) values ('선생님', '../images/korean/level5/선생님.png', '1' , '5'); -- 선생님
+insert into TB_EDU_DATA(word,filePath, type, level) values ('달팽이', '../images/korean/level5/달팽이.png', '1' , '5'); -- 달팽이
+insert into TB_EDU_DATA(word,filePath, type, level) values ('햄스터', '../images/korean/level5/햄스터.png', '1' , '5'); -- 햄스터
+insert into TB_EDU_DATA(word,filePath, type, level) values ('동생', '../images/korean/level5/동생.png', '1' , '5'); -- 동생
+insert into TB_EDU_DATA(word,filePath, type, level) values ('책상', '../images/korean/level5/책상.png', '1' , '5'); -- 책상
+
+
+-- 영어(type2)
+-- 레벨1은 대문자->소문자
+insert into TB_EDU_DATA(word,filePath, type, level) values ('a','../images/english/level1/a.png', '2' , '1'); -- a
+insert into TB_EDU_DATA(word,filePath, type, level) values ('b','../images/english/level1/b.png', '2' , '1'); -- b
+insert into TB_EDU_DATA(word,filePath, type, level) values ('c','../images/english/level1/c.png', '2' , '1'); -- c
+insert into TB_EDU_DATA(word,filePath, type, level) values ('d','../images/english/level1/d.png', '2' , '1'); -- d
+insert into TB_EDU_DATA(word,filePath, type, level) values ('e','../images/english/level1/e.png', '2' , '1'); -- e
+insert into TB_EDU_DATA(word,filePath, type, level) values ('f','../images/english/level1/f.png', '2' , '1'); -- f
+insert into TB_EDU_DATA(word,filePath, type, level) values ('g','../images/english/level1/g.png', '2' , '1'); -- g
+insert into TB_EDU_DATA(word,filePath, type, level) values ('h','../images/english/level1/h.png', '2' , '1'); -- h
+insert into TB_EDU_DATA(word,filePath, type, level) values ('i','../images/english/level1/i.png', '2' , '1'); -- i
+insert into TB_EDU_DATA(word,filePath, type, level) values ('j','../images/english/level1/j.png', '2' , '1'); -- j
+
+
+
+-- 대문자 -> 소문자
+insert into TB_EDU_DATA(word,filePath, type, level) values ('A','../images/english/level1/A2.png', '2' , '1'); -- A
+insert into TB_EDU_DATA(word,filePath, type, level) values ('B','../images/english/level1/B2.png', '2' , '1'); -- B
+insert into TB_EDU_DATA(word,filePath, type, level) values ('C','../images/english/level1/C2.png', '2' , '1'); -- C
+insert into TB_EDU_DATA(word,filePath, type, level) values ('D','../images/english/level1/D2.png', '2' , '1'); -- D
+insert into TB_EDU_DATA(word,filePath, type, level) values ('E','../images/english/level1/E2.png', '2' , '1'); -- E
+insert into TB_EDU_DATA(word,filePath, type, level) values ('F','../images/english/level1/F2.png', '2' , '1'); -- F
+insert into TB_EDU_DATA(word,filePath, type, level) values ('G','../images/english/level1/G2.png', '2' , '1'); -- G
+insert into TB_EDU_DATA(word,filePath, type, level) values ('H','../images/english/level1/H2.png', '2' , '1'); -- H
+insert into TB_EDU_DATA(word,filePath, type, level) values ('I','../images/english/level1/I2.png', '2' , '1'); -- I
+insert into TB_EDU_DATA(word,filePath, type, level) values ('J','../images/english/level1/J2.png', '2' , '1'); -- J
+
+-- 레벨2 
+insert into TB_EDU_DATA(word,filePath, type, level) values ('apple','../images/english/level2/apple.png', '2' , '2'); -- apple
+insert into TB_EDU_DATA(word,filePath, type, level) values ('bee','../images/english/level2/bee.png', '2' , '2'); -- bee
+insert into TB_EDU_DATA(word,filePath, type, level) values ('car','../images/english/level2/car.png', '2' , '2'); -- car
+
+-- 레벨 3
+insert into TB_EDU_DATA(word,filePath, type, level) values ('hi','../images/english/level3/hi.png', '2' , '3'); -- hi
+insert into TB_EDU_DATA(word,filePath, type, level) values ('good','../images/english/level3/good.png', '2' , '3'); -- good
+insert into TB_EDU_DATA(word,filePath, type, level) values ('cat','../images/english/level3/hi.png', '2' , '3'); -- cat
+insert into TB_EDU_DATA(word,filePath, type, level) values ('dog','../images/english/level3/dog.png', '2' , '3'); -- dog
+insert into TB_EDU_DATA(word,filePath, type, level) values ('bear','../images/english/level3/bear.png', '2' , '3'); -- bear
+insert into TB_EDU_DATA(word,filePath, type, level) values ('bike','../images/english/level3/bike.png', '2' , '3'); -- bike
+insert into TB_EDU_DATA(word,filePath, type, level) values ('bus','../images/english/level3/bus.png', '2' , '3'); -- bus
+insert into TB_EDU_DATA(word,filePath, type, level) values ('boat','../images/english/level4/boat.png', '2' , '3'); -- boat
+insert into TB_EDU_DATA(word,filePath, type, level) values ('cake','../images/english/level3/cake.png', '2' , '3'); -- cake
+
+-- 레벨4
+
+insert into TB_EDU_DATA(word,filePath, type, level) values ('tiger','../images/english/level4/tiger.png', '2' , '4'); -- tiger
+insert into TB_EDU_DATA(word,filePath, type, level) values ('monkey','../images/english/level4/monkey.png', '2' , '4'); -- monkey
+insert into TB_EDU_DATA(word,filePath, type, level) values ('boat','../images/english/level4/boat.png', '2' , '4'); -- boat
+insert into TB_EDU_DATA(word,filePath, type, level) values ('tomato','../images/english/level4/tomato.png', '2' , '4'); -- tomato
+insert into TB_EDU_DATA(word,filePath, type, level) values ('candy','../images/english/level4/candy.png', '2' , '4'); -- candy
+insert into TB_EDU_DATA(word,filePath, type, level) values ('moon','../images/english/level4/moon.png', '2' , '4'); -- moon
+insert into TB_EDU_DATA(word,filePath, type, level) values ('leaf','../images/english/level4/leaf.png', '2' , '4'); -- leaf
+
+-- 레벨5
+insert into TB_EDU_DATA(word,filePath, type, level) values ('airplane','../images/english/level5/airplane.png', '2' , '5'); -- airplane
+insert into TB_EDU_DATA(word,filePath, type, level) values ('cucumber','../images/english/level5/cucumber.png', '2' , '5'); -- cucumber
+insert into TB_EDU_DATA(word,filePath, type, level) values ('present','../images/english/level5/present.png', '2' , '5'); -- present
+insert into TB_EDU_DATA(word,filePath, type, level) values ('camera','../images/english/level5/camera.png', '2' , '5'); -- camera
+insert into TB_EDU_DATA(word,filePath, type, level) values ('ticket','../images/english/level5/ticket.png', '2' , '5'); -- ticket
+insert into TB_EDU_DATA(word,filePath, type, level) values ('basket','../images/english/level5/basket.png', '2' , '5'); -- basket
